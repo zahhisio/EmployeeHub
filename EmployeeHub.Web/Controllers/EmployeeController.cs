@@ -46,6 +46,10 @@ namespace EmployeeHub.Web.Controllers
             
             if (ModelState.IsValid)
             {
+                int calculatedAge = DateTime.Now.Year - employee.BirthDate.Year;
+
+                employee.Age = calculatedAge;
+
                 db.Add(employee);
                 return RedirectToAction("Details", new { id = employee.Id });
             }
@@ -70,6 +74,10 @@ namespace EmployeeHub.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                int calculatedAge = DateTime.Now.Year - employee.BirthDate.Year;
+
+                employee.Age = calculatedAge;
+
                 db.Update(employee, id);
                 return RedirectToAction("Details", new { id = employee.Id });
             }
