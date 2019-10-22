@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top" >
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -19,9 +19,22 @@
                 @Html.ActionLink("PT NALYSA EMPLOYEE LIST", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("List", "Index", "Employee")</li>
-                    <li>@Html.ActionLink("Add", "Create", "Employee")</li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle"
+                           data-toggle="dropdown"
+                           role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">
+                            Menu
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("List", "Index", "Employee")</li>
+                            <li role="separator" class="divider"></li>
+                            <li>@Html.ActionLink("Add", "Create", "Employee")</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
