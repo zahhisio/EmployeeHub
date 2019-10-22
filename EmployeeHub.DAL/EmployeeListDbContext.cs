@@ -11,5 +11,11 @@ namespace EmployeeHub.DAL
     public class EmployeeListDbContext : DbContext
     {
         public DbSet<Employee> Employees { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer<EmployeeListDbContext>(null);
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

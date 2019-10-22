@@ -42,7 +42,7 @@ namespace EmployeeHub.Services
             var existing = db.Employees.Find(id);
 
             existing.Name = employee.Name;
-            existing.JoinDate = employee.JoinDate;
+            existing.BirthDate = employee.BirthDate;
             existing.Age = employee.Age;
             existing.Skill = employee.Skill;
 

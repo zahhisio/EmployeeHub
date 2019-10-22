@@ -15,7 +15,7 @@ namespace EmployeeHub.Models.Models
         public string Name { get; set; }
 
 
-        public DateTime JoinDate { get; set; }
+        public DateTime BirthDate { get; set; }
 
         //[Required(ErrorMessage = "Employee age must be filled in.")]
         public int Age { get; set; }
